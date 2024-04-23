@@ -1,4 +1,4 @@
-package sports;
+package sports.app;
 
 import javax.swing.JOptionPane;
 

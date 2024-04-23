@@ -1,4 +1,4 @@
-package taxi;
+package taxi.app;
 
 import javax.swing.JOptionPane;
 
