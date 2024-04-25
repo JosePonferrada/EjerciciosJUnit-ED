@@ -5,7 +5,13 @@ import java.util.Scanner;
 public class Calculadora {
 	
 	public static void main(String[] args) {
-				
+		
+		System.out.println(factorialRecursivo(5));
+		System.out.println(esCapicua(303));
+		System.out.println(primoOCompuesto(23));
+		System.out.println(siguientePrimo(23));
+		System.out.println(calculaPotencia(2, 3));
+		System.out.println(cuentaDigitos("0005"));
 		
 	}
 
@@ -25,8 +31,16 @@ public class Calculadora {
 		return num * factorialRecursivo(num - 1);
 	}
 	
+	/**
+	 * Método que nos dice si un número introducido es capicúa o no
+	 * @param num
+	 * @return
+	 */
 	public static boolean esCapicua (int num) {
-		
+		String original = String.valueOf(num);
+        String invertido = new StringBuffer(original).reverse().toString();
+        
+        return original.equals(invertido);
 	}
 	
 	/**
@@ -52,6 +66,11 @@ public class Calculadora {
 		
 	}
 	
+	/**
+	 * Método que nos devuelve el siguiente número primo al que hemos introducido
+	 * @param num
+	 * @return
+	 */
 	public static int siguientePrimo (int num) {
 		
 		int i = num + 1;
@@ -65,16 +84,18 @@ public class Calculadora {
 	 * @param num
 	 * @return
 	 */
-	public static int sumaRecursivaDigitos (int num) {
+	public static int cuentaDigitos (String num) {
 		
-		if (num == 0) {
-			return 0;
-		}
-		
-		return num % 10 + sumaRecursivaDigitos(num / 10);
-		
+//		num.toCharArray().length;
+		return num.toCharArray().length;
 	}
 	
+	/**
+	 * Método que calcula la potencia de un número tras introducir la base y el exponente
+	 * @param base
+	 * @param exponente
+	 * @return
+	 */
 	public static double calculaPotencia (int base, int exponente) {
 		
 		return Math.pow(base, exponente);
